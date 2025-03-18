@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code breaker</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./break.js"></script>
+</head>
+<body>
+    <h1>Willkommen zu Code Breaker!</h1>
+    <div id="pinwindow">
+        <div id="leere">
+            <p><span id="eins">-</span> <span id="zwei">-</span> <span id="drei">-</span> <span id="vier">-</span></p>
+        </div>
+        <p>Du musst einen vier-stelligen Pin-Code knacken und die gute Nachricht ist: Du hast unendlich viele Versuche.</p>
+        <button id="start" onclick="return codeErstellen()">Klicke hier zum Starten</button>
+        <p id="anweisung"> </p>
+    </div>
+    <div id="versuchsfeld">
+        <h2>Gib hier deine Versuche ein:</h2>
+        <input type="text" id="input">
+        <button id="check" type="submit" onclick="return numberCheck()">Überprüfen</button>
+    </div>
+</body>
+</html>
