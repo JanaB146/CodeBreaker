@@ -43,18 +43,20 @@ function numberCheck() {
         
         if (rightPoint == 0) {
             document.getElementById("result").innerText = "Zerroo";
-        }
-        if (rightPoint == 1) {
-            document.getElementById("result").innerText = "Erste Zahl";
-        }
-        if (rightPoint == 2) {
-            document.getElementById("result").innerText = "Zweite Zahl";
-        }
-        if (rightPoint == 3) {
-            document.getElementById("result").innerText = "Dritte Zahl";
+        } else if (rightPoint == 1) {
+            document.getElementById("result").innerText = "Eine Zahl erraten";
+        } else if (rightPoint == 2) {
+            document.getElementById("result").innerText = "Zwei Zahlen erraten";
+        } else if (rightPoint == 3) {
+            document.getElementById("result").innerText = "Dritte Zahl erraten";
         }
         if (rightPoint == 4) {
             document.getElementById("result").innerText = "Herzlichen Glückwunsch, du hast den Code geknackt!";
+        } else  {
+            document.getElementById("eins").innerText = "- ";
+            document.getElementById("zwei").innerText = "- ";
+            document.getElementById("drei").innerText = "- ";
+            document.getElementById("vier").innerText = "- ";
         }
         rightPoint = 0;
         return false;
