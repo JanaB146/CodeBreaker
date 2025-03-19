@@ -16,6 +16,7 @@ function numberCheck() {
     }
     while (rightPoint < 4) {
         guessedNum = document.getElementById("input").value;
+        document.getElementById("input").value = "";
         if (guessedNum.length !== 4) {
             document.getElementById("try").innerText = "Bitte gib einen vierstelligen Code ein.";
         }
@@ -48,16 +49,28 @@ function numberCheck() {
         } else if (rightPoint == 2) {
             document.getElementById("result").innerText = "Zwei Zahlen erraten";
         } else if (rightPoint == 3) {
-            document.getElementById("result").innerText = "Dritte Zahl erraten";
+            document.getElementById("result").innerText = "Drei Zahlen erraten";
         }
+
+        if(num1 != zahl1 || num2 != zahl2 || num3 != zahl3 || num4 != zahl4) {
+            setTimeout(() => {
+                document.getElementById("eins").innerText = "- ";
+            document.getElementById("zwei").innerText = "- ";
+            document.getElementById("drei").innerText = "- ";
+            document.getElementById("vier").innerText = "- ";
+            }, 2000);
+        }
+
         if (rightPoint == 4) {
-            document.getElementById("result").innerText = "Herzlichen Glückwunsch, du hast den Code geknackt!";
-        } else  {
+            document.getElementById("result").innerText = "Vier Zahlen erraten!";
+            document.getElementById("anweisung").innerText = "Herzlichen Glückwunsch, du hast den Code geknackt!";
+            document.getElementById("start").innerText = "Neues Spiel";
             document.getElementById("eins").innerText = "- ";
             document.getElementById("zwei").innerText = "- ";
             document.getElementById("drei").innerText = "- ";
             document.getElementById("vier").innerText = "- ";
         }
+        
         rightPoint = 0;
         return false;
     }
